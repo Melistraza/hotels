@@ -1,0 +1,6 @@
+Django==2.0.2
+djangorestframework==3.7.7
+django-environ==0.4.4
+docker-compose==1.19.0
+gunicorn==19.7.1
+psycopg2==2.7.4
