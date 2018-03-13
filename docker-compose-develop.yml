@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+
+  db:
+    image: postgres:alpine
+    container_name: hotels_db
+    environment:
+      POSTGRES_DB: hotels
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/home/melistraza/postgresql/data/
+
+volumes:
+  pg_data:

@@ -29,8 +29,8 @@ class RoomSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("The arrival date should be greater or equal to the date of departure")
         return data
 
-    def update(self, instance, validated_data):
-        delta = timezone.now() - instance.updated_at
-        if delta.total_seconds() // 60:
-            raise serializers.ValidationError('You can make changes only once a minute')
-        return super(RoomSerializer, self).update(instance, validated_data)
+    # def update(self, instance, validated_data):
+    #     delta = timezone.now() - instance.updated_at
+    #     if delta.total_seconds() // 60:
+    #         raise serializers.ValidationError('You can make changes only once a minute')
+    #     return super(RoomSerializer, self).update(instance, validated_data)

@@ -9,9 +9,11 @@ services:
     entrypoint: /docker-entrypoint-api.sh
     ports:
       - "8000:8000"
+    environment:
+      DB_URL: postgresql://postgres@db:5432/hotels
 
   db:
-    image: postgres:9.5-alpine
+    image: postgres:alpine
     container_name: hotels_db
     environment:
       POSTGRES_DB: hotels
