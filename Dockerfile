@@ -3,11 +3,7 @@ FROM python:3.5.2-alpine
 
 RUN apk update && apk add \
     build-base \
-    jpeg-dev \
-    zlib-dev \
-    libpq \
-    postgresql-dev \
-    gettext
+    postgresql-dev
 
 WORKDIR /hotels
 
